@@ -7,57 +7,46 @@
 
 import UIKit
 import Combine
-import SDWebImage
+
 
 class ViewController: UIViewController {
     
     var cancellable : AnyCancellable?
     @IBOutlet weak var tblImageList: UITableView!
     var imageList = ImageModel()
+    var vm = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: list)!
-        let res: Resource<ImageModel> = Resource(url: url)
-        cancellable = APIClient().fetch(res: res).sink(receiveCompletion: { result in
-            print(result)
-        }, receiveValue: { list in
-            print(list.count)
+        cancellable = vm.imageResult.sink { completion in
+            switch completion {
+            case .failure(let err):
+                print(err.localizedDescription)
+            case .finished:
+                print("do stuff")
+            }
+        } receiveValue: { list in
             print(list)
-            self.imageList = list
             self.tblImageList.reloadData()
-        })
-        
-        
+        }
+        vm.getImageList()
     }
 }
+
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        imageList.count
+        vm.picList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath)as! imageCell
-        let obj = imageList[indexPath.row]
-        
-        
-        if let strurl = obj.downloadURL as? String {
-            let url = URL(string: strurl)!
-            print(url)
-            cell.img.sd_setImage(with: url, placeholderImage: UIImage(named: ""))
-            cell.img.layer.cornerRadius = 5
-        }
-        cell.btnFav.tag = indexPath.row
-        cell.btnFav.addTarget(self, action: #selector(onTapFav), for: .touchUpInside)
-        cell.lblAuthor.text = obj.author
+        let obj = vm.picList[indexPath.row]
+        cell.imageObj = obj
+        cell.setUI()
         return cell
     }
     
-    @objc func onTapFav(_ sender: UIButton)
-    {
-        print(sender.tag)
-        
-    }
+   
     
     
 }

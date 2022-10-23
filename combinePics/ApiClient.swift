@@ -40,7 +40,6 @@ extension Resource {
     }
 }
 
-typealias dataCompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
 class APIClient {
     

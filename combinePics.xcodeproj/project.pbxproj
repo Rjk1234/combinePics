@@ -13,9 +13,12 @@
 		254C917E28FE67BF00CB4FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254C917C28FE67BF00CB4FBA /* Main.storyboard */; };
 		254C918028FE67C000CB4FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254C917F28FE67C000CB4FBA /* Assets.xcassets */; };
 		254C918328FE67C000CB4FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254C918128FE67C000CB4FBA /* LaunchScreen.storyboard */; };
+		2596753A2907D42B0054BE9D /* VCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259675392907D42B0054BE9D /* VCLoginViewController.swift */; };
+		2596753C2907F8E10054BE9D /* ViewControllerSignUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2596753B2907F8E10054BE9D /* ViewControllerSignUP.swift */; };
 		25A4C02928FF03D20007F1CF /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C02828FF03D20007F1CF /* ApiClient.swift */; };
 		25A4C02B28FF05BF0007F1CF /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C02A28FF05BF0007F1CF /* ImageModel.swift */; };
 		25A4C02D28FF09A10007F1CF /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4C02C28FF09A10007F1CF /* imageCell.swift */; };
+		25BEB6DC29054EE1002D9BA8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEB6DB29054EE1002D9BA8 /* ViewModel.swift */; };
 		6EEF364EE83764A9196AB3EF /* Pods_combinePics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39EB6B14D7DB5CE7AE40FDF /* Pods_combinePics.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +31,12 @@
 		254C917F28FE67C000CB4FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		254C918228FE67C000CB4FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		254C918428FE67C000CB4FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259675392907D42B0054BE9D /* VCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLoginViewController.swift; sourceTree = "<group>"; };
+		2596753B2907F8E10054BE9D /* ViewControllerSignUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSignUP.swift; sourceTree = "<group>"; };
 		25A4C02828FF03D20007F1CF /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		25A4C02A28FF05BF0007F1CF /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		25A4C02C28FF09A10007F1CF /* imageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		25BEB6DB29054EE1002D9BA8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4DED047FECC17270CE3FB1C1 /* Pods-combinePics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combinePics.debug.xcconfig"; path = "Target Support Files/Pods-combinePics/Pods-combinePics.debug.xcconfig"; sourceTree = "<group>"; };
 		817242C60F5EAE913C1C1548 /* Pods-combinePics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combinePics.release.xcconfig"; path = "Target Support Files/Pods-combinePics/Pods-combinePics.release.xcconfig"; sourceTree = "<group>"; };
 		B39EB6B14D7DB5CE7AE40FDF /* Pods_combinePics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_combinePics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +85,9 @@
 				25A4C02828FF03D20007F1CF /* ApiClient.swift */,
 				25A4C02A28FF05BF0007F1CF /* ImageModel.swift */,
 				25A4C02C28FF09A10007F1CF /* imageCell.swift */,
+				25BEB6DB29054EE1002D9BA8 /* ViewModel.swift */,
+				259675392907D42B0054BE9D /* VCLoginViewController.swift */,
+				2596753B2907F8E10054BE9D /* ViewControllerSignUP.swift */,
 			);
 			path = combinePics;
 			sourceTree = "<group>";
@@ -89,7 +98,6 @@
 				4DED047FECC17270CE3FB1C1 /* Pods-combinePics.debug.xcconfig */,
 				817242C60F5EAE913C1C1548 /* Pods-combinePics.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,8 +228,11 @@
 				25A4C02B28FF05BF0007F1CF /* ImageModel.swift in Sources */,
 				254C917728FE67BF00CB4FBA /* AppDelegate.swift in Sources */,
 				254C917928FE67BF00CB4FBA /* SceneDelegate.swift in Sources */,
+				2596753C2907F8E10054BE9D /* ViewControllerSignUP.swift in Sources */,
 				25A4C02928FF03D20007F1CF /* ApiClient.swift in Sources */,
 				25A4C02D28FF09A10007F1CF /* imageCell.swift in Sources */,
+				25BEB6DC29054EE1002D9BA8 /* ViewModel.swift in Sources */,
+				2596753A2907D42B0054BE9D /* VCLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
